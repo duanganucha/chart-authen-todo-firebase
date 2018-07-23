@@ -32,15 +32,15 @@ export class HomePage {
       this.yArray.splice(0, this.yArray.length);
 
 
-      // Object.keys(this.items).forEach((key) => {
-      //   this.xArray.push(key);
-      //   this.yArray.push(this.items[key]);
-      // })
-
-      Object.entries(this.items).forEach(([key, val]) => {
+      Object.keys(this.items).forEach((key) => {
         this.xArray.push(key);
-        this.yArray.push(val);
-      });
+        this.yArray.push(this.items[key]);
+      })
+
+      // Object.entries(this.items).forEach(([key, val]) => {
+      //   this.xArray.push(key);
+      //   this.yArray.push(val);
+      // });
 
 
       console.log(this.xArray)
@@ -61,7 +61,7 @@ export class HomePage {
         datasets: [{
           label: 'Average imcome',
           fill: true,
-          lineTension: 0.1,
+          lineTension: 0 ,
           backgroundColor: "rgba(77,138,255,0.4)",
           borderColor: "rgba(77,138,255,1)",
           borderCapStyle: 'butt',
@@ -86,7 +86,7 @@ export class HomePage {
           xAxes: [{
             scaleLabel: {
               display: true,
-              labelString: 'Ages'
+              labelString: 'Ages',
             }
           }]
         }
